@@ -4,7 +4,9 @@ An interactive exploration of generative AI use and attitudes.
 
 ## Explore
 
-Open **[index.html](index.html)** in a browser. No installation or backend is required.
+**[Open the interactive demo →](https://yifeng-lab.github.io/learning-ripple-effect/)**
+
+For local viewing, download the repository and open `index.html`. No installation or backend is required.
 
 - **Rings:** agreement from 1 (strongly disagree) to 5 (strongly agree).
 - **Halos:** AI-use frequency from 1 (never) to 5 (very often).
