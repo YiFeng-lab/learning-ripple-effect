@@ -1,7 +1,6 @@
 # Learning Ripple Effect
 
 An interactive exploration of generative AI use and attitudes.  
-生成式AI使用与态度问卷的交互可视化 · Yi Feng参与的课程协作项目（2024.10–2025.01）。
 
 ## Explore
 
