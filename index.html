@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learning Ripple Effect — an interactive exploration of generative AI use and attitudes. A course project by Yi Feng and collaborators.">
+  <title>Learning Ripple Effect · Yi Feng</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">◎</span> Yi Feng <span class="brand-slash">/</span> Selected work</a><span class="project-type">DATA EXPLORATION · COURSE PROJECT</span></header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">01 / INTERACTIVE VISUALIZATION</p><h1>Learning<br><span>Ripple Effect.</span></h1><p class="description">Every answer makes a ripple.<br>Explore how students use generative AI—and how they feel about it.</p></div>
+      <div class="intro-note"><span class="note-symbol" aria-hidden="true">◎</span><p>A small window into<br><strong>AI & the learning experience.</strong></p><p class="zh">生成式AI使用与态度 · 交互式问卷探索</p></div>
+    </section>
+    <section class="explorer" aria-labelledby="explorer-title">
+      <div class="section-top"><div><p class="eyebrow">EXPLORE THE RIPPLES</p><h2 id="explorer-title">One question. Many perspectives.</h2></div><span class="demo-tag">SYNTHETIC DEMO DATA</span></div>
+      <p class="helper">Each dot is one response. The ring shows agreement; the halo shows AI-use frequency. Select a question to look closer.</p>
+      <form class="filters" id="filters" aria-label="Filter responses">
+        <label>Degree<select id="degree"><option value="all">All degrees</option></select></label>
+        <label>Major<select id="major"><option value="all">All majors</option></select></label>
+        <label>Gender<select id="gender"><option value="all">All genders</option></select></label>
+        <button class="reset" type="reset">Reset filters <span aria-hidden="true">↗</span></button>
+      </form>
+      <div class="legend-row"><div class="legend"><span class="legend-dot"></span><span>One response</span><span class="legend-halo"></span><span>AI-use frequency</span><span class="legend-ring"></span><span>Agreement 1–5, inside → outside</span></div><p id="count" role="status" aria-live="polite"></p></div>
+      <div id="charts" class="chart-grid"></div>
+      <p id="empty" class="empty" hidden>No responses match these filters. Try another combination or reset.</p>
+      <p class="data-note">Demo: 131 generated records across 28 attitude items. These are synthetic examples, not research findings. Original question wording was not supplied; item IDs are retained.</p>
+    </section>
+    <section class="about" aria-label="About the project"><div><p class="eyebrow">ABOUT THE PROJECT</p><h2>From answers<br>to exploration.</h2></div><div><p>A collaborative course project connecting questionnaire preparation, SQLite storage and interactive visualization. The original implementation used Python, React, D3.js and Node.js.</p><p>This lightweight portfolio edition keeps the concentric-circle interaction and runs directly in the browser. Yi Feng participated across project stages; the implementation stack describes the team project.</p><div class="tech-tags"><span>Python</span><span>SQLite</span><span>Survey data</span><span>Interactive visualization</span></div></div></section>
+  </main>
+  <footer><span>Yi Feng · Learning Technologies</span><span>Learning Ripple Effect / 2024–2025</span></footer>
+  <dialog id="detail" aria-labelledby="detail-title"><div class="dialog-top"><div><p class="eyebrow">A CLOSER LOOK</p><h2 id="detail-title"></h2></div><button id="close-detail" type="button" aria-label="Close question details">×</button></div><p id="detail-count"></p><div id="detail-chart"></div><div class="scale"><span>1 Strongly disagree</span><span>3 Neutral</span><span>5 Strongly agree</span></div><p class="detail-hint">Hover or focus a response for its details. Current filters apply here too.</p></dialog>
+  <div id="tooltip" role="tooltip" hidden></div>
+</body>
+</html>
