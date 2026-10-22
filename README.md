@@ -1,38 +1,39 @@
 # Learning Ripple Effect
 
-An interactive exploration of generative AI use and attitudes.  
+**Generative AI & Student Learning · Interactive Data Exploration**
 
-## Explore
+[Open the interactive demo →](https://yifeng-lab.github.io/learning-ripple-effect/) · [Read the report (PDF) →](Learning-Ripple-Effect-Report.pdf)
 
-**[Open the interactive demo →](https://yifeng-lab.github.io/learning-ripple-effect/)**
+## Focus
 
-For local viewing, download the repository and open `index.html`. No installation or backend is required.
+How do university students perceive generative AI in their learning?
 
-- **Rings:** agreement from 1 (strongly disagree) to 5 (strongly agree).
-- **Halos:** AI-use frequency from 1 (never) to 5 (very often).
-- **Filters:** degree, major and gender.
-- **Interactions:** hover for response details; select a question for an expanded view.
+- **AI literacy:** understanding limitations, factual inaccuracies and bias.
+- **Learning opportunities:** personalized feedback and digital competence.
+- **Learning concerns:** over-reliance, social interaction and transferable skills.
 
-## Data & contribution
+The project turns survey responses into concentric-circle visualizations, combining agreement levels with chatbot-use frequency.
 
-The original course files contained **131 questionnaire records and 28 attitude items**. This public demo uses **131 synthetic records**, clearly labelled on the page. The original responses are not included. Question IDs are retained because the item wording was not supplied.
+## Data & interaction
 
-Yi Feng participated across project stages. The original team's implementation used Python, SQLite, React, D3.js and Node.js; these are project technologies, not a claim of independent proficiency in every tool.
+The original work uses **131 university-student responses** from Jocelyn Dumlao’s [Chatbots’ Impact on University Learning](https://www.kaggle.com/datasets/jocelyndumlao/chatbots-impact-on-university-learning) dataset, collected in May 2023. These are secondary data, not a survey collected by the project team.
 
-This portfolio edition simplifies the original visualization into plain HTML, CSS and JavaScript / SVG for direct viewing and GitHub Pages hosting. It is a presentation adaptation, not an unchanged copy of the original implementation.
+The live demo uses **131 clearly labelled synthetic records across 28 attitude items**. Filter by degree, major or gender; hover over a response; select a question for an expanded view. The synthetic demo illustrates the interaction, not empirical findings.
 
-## Files
+## Report & collaboration
 
-| File | Purpose |
-| --- | --- |
-| `index.html` | Page structure and controls |
-| `styles.css` | Layout and visual styling |
-| `app.js` | Concentric-circle rendering, filters and detail view |
-| `data.js` | Synthetic demo records |
-| `prepare_data.py` | Reproducible pandas → SQLite → demo-data pipeline |
+**The Learning Ripple Effect of Generative AI**  
+*Student Perceptions and Interactive Data Visualization*
 
-To regenerate demo data, install pandas and run `python prepare_data.py`. Generated CSV / SQLite files stay in the ignored `build/` folder.
+Report co-authors: **Jingjing Sun, Yi Feng and Jui-chien Chen**. Yi Feng participated across project stages and co-authored the report.
 
-## GitHub Pages
+The original implementation combined Python, SQLite, React, D3.js and Express. This portfolio edition presents the interaction with plain HTML, CSS and JavaScript / SVG for direct browser viewing.
 
-In the repository's **Settings → Pages**, select **Deploy from a branch**, then **main / (root)** and save. The root contains `index.html`, so there is no build step.
+## Files & local use
+
+- `index.html`, `styles.css`, `app.js`: page, styling and interaction.
+- `data.js`: synthetic demo records.
+- `prepare_data.py`: reproducible pandas → SQLite → demo-data pipeline.
+- `Learning-Ripple-Effect-Report.pdf`: project report.
+
+Download the repository and open `index.html` in a browser. To regenerate demo data, install pandas and run `python prepare_data.py`; generated CSV / SQLite files stay in the ignored `build/` folder.

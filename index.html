@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Learning Ripple Effect — an interactive exploration of generative AI use and attitudes. A course project by Yi Feng and collaborators.">
+  <meta name="description" content="Learning Ripple Effect — exploring student perceptions of generative AI, learning opportunities and concerns through interactive data visualization.">
   <title>Learning Ripple Effect · Yi Feng</title>
   <link rel="stylesheet" href="styles.css">
   <script src="data.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
-  <header class="topbar"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">◎</span> Yi Feng <span class="brand-slash">/</span> Selected work</a><span class="project-type">DATA EXPLORATION · COURSE PROJECT</span></header>
+  <header class="topbar"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">◎</span> Yi Feng <span class="brand-slash">/</span> Selected work</a><span class="project-type">GENERATIVE AI · LEARNING ANALYTICS</span></header>
   <main>
     <section class="intro">
-      <div><p class="eyebrow">01 / INTERACTIVE VISUALIZATION</p><h1>Learning<br><span>Ripple Effect.</span></h1><p class="description">Every answer makes a ripple.<br>Explore how students use generative AI—and how they feel about it.</p></div>
+      <div><p class="eyebrow">01 / GENERATIVE AI & STUDENT EXPERIENCE</p><h1>Learning<br><span>Ripple Effect.</span></h1><p class="description">Every answer makes a ripple.<br>Explore how students use generative AI—and how they feel about it.</p><p class="helper"><a href="Learning-Ripple-Effect-Report.pdf" target="_blank" rel="noopener">Read the project report ↗</a></p></div>
       <div class="intro-note"><span class="note-symbol" aria-hidden="true">◎</span><p>A small window into<br><strong>AI & the learning experience.</strong></p><p class="zh">生成式AI使用与态度 · 交互式问卷探索</p></div>
     </section>
     <section class="explorer" aria-labelledby="explorer-title">
@@ -28,9 +28,9 @@
       <div class="legend-row"><div class="legend"><span class="legend-dot"></span><span>One response</span><span class="legend-halo"></span><span>AI-use frequency</span><span class="legend-ring"></span><span>Agreement 1–5, inside → outside</span></div><p id="count" role="status" aria-live="polite"></p></div>
       <div id="charts" class="chart-grid"></div>
       <p id="empty" class="empty" hidden>No responses match these filters. Try another combination or reset.</p>
-      <p class="data-note">Demo: 131 generated records across 28 attitude items. These are synthetic examples, not research findings. Original question wording was not supplied; item IDs are retained.</p>
+      <p class="data-note">Demo: 131 generated records across 28 attitude items. These are synthetic examples, not research findings. Question IDs are retained; see the report for the research context.</p>
     </section>
-    <section class="about" aria-label="About the project"><div><p class="eyebrow">ABOUT THE PROJECT</p><h2>From answers<br>to exploration.</h2></div><div><p>A collaborative course project connecting questionnaire preparation, SQLite storage and interactive visualization. The original implementation used Python, React, D3.js and Node.js.</p><p>This lightweight portfolio edition keeps the concentric-circle interaction and runs directly in the browser. Yi Feng participated across project stages; the implementation stack describes the team project.</p><div class="tech-tags"><span>Python</span><span>SQLite</span><span>Survey data</span><span>Interactive visualization</span></div></div></section>
+    <section class="about" aria-label="About the project"><div><p class="eyebrow">AI & THE LEARNING EXPERIENCE</p><h2>How does AI<br>shape learning?</h2></div><div><p>This project explores university students’ perceptions of generative AI: understanding its limitations, using personalized feedback and building digital competence, alongside concerns about accuracy, over-reliance and social interaction.</p><p>The original analysis draws on 131 responses in the publicly shared <a href="https://www.kaggle.com/datasets/jocelyndumlao/chatbots-impact-on-university-learning" target="_blank" rel="noopener">Chatbots’ Impact on University Learning</a> dataset. Concentric circles make agreement levels and use frequency visible together; demographic filters support exploration across groups.</p><p><a href="Learning-Ripple-Effect-Report.pdf" target="_blank" rel="noopener">Read the report: The Learning Ripple Effect of Generative AI ↗</a><br>Report co-authors: Jingjing Sun · Yi Feng · Jui-chien Chen.</p><div class="tech-tags"><span>Generative AI</span><span>Learning analytics</span><span>Python & SQLite</span><span>Interactive visualization</span></div></div></section>
   </main>
   <footer><span>Yi Feng · Learning Technologies</span><span>Learning Ripple Effect / 2024–2025</span></footer>
   <dialog id="detail" aria-labelledby="detail-title"><div class="dialog-top"><div><p class="eyebrow">A CLOSER LOOK</p><h2 id="detail-title"></h2></div><button id="close-detail" type="button" aria-label="Close question details">×</button></div><p id="detail-count"></p><div id="detail-chart"></div><div class="scale"><span>1 Strongly disagree</span><span>3 Neutral</span><span>5 Strongly agree</span></div><p class="detail-hint">Hover or focus a response for its details. Current filters apply here too.</p></dialog>
